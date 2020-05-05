@@ -1,0 +1,163 @@
+<!doctype>
+<html>
+<head>
+	<title>Technology - BBC News</title>
+	<style>
+	.topbar{
+		background-color:white;
+		height:50px;
+		width:1500px;
+		margin 0 auto;
+	
+	}	
+	.eachbar{
+		float:left;
+		border-left:1.5px #d2d2d2 solid;
+		height:100%;
+		font-weight: bold;
+		<!-- font-size: 13%; -->
+	}
+	#bbcimg{
+		float:left;
+		margin:9px 12px 0px 150px;
+	}
+	#mysinginimg{
+		width:23px;
+		margin:12px 0px 0px 17px;
+		float:left;
+	}
+	#myarrowimg{
+		width:10px;
+		position:relative;
+		top:-3px;
+		left:70px;
+		margin-right:80px;
+		<!-- margin:-3px 0px 0px 70px; -->
+		float:left;
+	}
+	#signin{
+		float:left;
+		margin-left:8px;
+		margin-right:103px;
+	}
+	.eachbartext{
+		margin:0px 16px 0px 16px;
+	}
+	#mysearch{
+		width: 162px;
+		background-color:#E4E4E4;
+		<!-- type-color:black; -->
+		float:left;
+		margin:15px 0px 0px 16px;
+	}
+	#searchimg{
+		width: 26px;
+		position:relative;
+		top:6.75px;
+		left:-4.5px;
+	}
+	body{
+		margin:0;pading:0;
+		font-family:ReithSans,Arial,Helvetica,freesans,sans-serif;		
+	}
+	
+	input[type=text], select {
+	
+	  width: 100%;
+	  padding: 4px 0px 2.5px 3.5px;
+	  margin: 8px 0;
+	  display: inline-block;
+	  border: 1px solid #E4E4E4;
+	  <!-- box-sizing: border-box; -->
+	}
+	input{
+	  font-weight: bold;
+	}
+	::placeholder { 		
+		color: black;
+		font-weight: bold;
+		<!-- margin:1px 1px 1px 1px; -->
+		opacity: 1; 
+	}	
+	:focus::placeholder {
+		color: gray;
+	}
+	<!-- } -->
+	  <!-- #orb-search-q { -->
+    <!-- border: none; -->
+    <!-- background: none; -->
+    <!-- height: 1.846em; -->
+    <!-- min-height: 24px; -->
+    <!-- font-weight: bold; -->
+
+    <!-- width: 162px; -->
+    <!-- float: left; -->
+    <!-- padding: 0 0 0 6px; -->
+    <!-- color: $orb-color-orb-input; -->
+    <!-- font-weight: bold; -->
+
+    <!-- &::placeholder { -->
+      <!-- color: $orb-color-orb-input; -->
+      <!-- font-weight: bold; -->
+    <!-- } -->
+
+    <!-- &:focus::placeholder { -->
+      <!-- color: $orb-color-orb-input-focus; -->
+    <!-- } -->
+  <!-- } -->
+	
+	</style>
+</head>
+<body>
+	<div class="topbar">
+
+		<img id="bbcimg" src="images\bbc-logo.png" width="106px">
+
+		<div class="eachbar">
+			<img id="mysinginimg"src="images\mysinginimg.png">
+			<div id="signin">
+				<p>Sign in</p>
+			</div>
+		</div>
+		<div class="eachbar">
+			<div class="eachbartext">
+				<p>News</p>
+			</div>
+		</div>
+		<div class="eachbar">
+			<div class="eachbartext">
+				<p>Sport</p>
+			</div>
+		</div>
+		<div class="eachbar">
+			<div class="eachbartext">
+				<p>Reel</p>
+			</div>
+		</div>
+		<div class="eachbar">
+			<div class="eachbartext">
+				<p>Worklife</p>
+			</div>
+		</div>
+		<div class="eachbar">
+			<div class="eachbartext">
+				<p>Travel</p>
+			</div>
+		</div>
+		<div class="eachbar">
+			<div class="eachbartext">
+				<p>Future</p>
+			</div>
+		</div>
+		<div class="eachbar">
+			<div class="eachbartext">
+				<p>More<img id="myarrowimg" src="images\myarrow.png"></p>				
+			</div>			
+		</div>
+		<div class="eachbar">
+			<input type="text" id="mySearch" placeholder="Search">
+			<button type="submit"><img id="searchimg" src="images\magnifying-glass.png"></button>
+		</div>
+	</div>
+</body>
+</html>

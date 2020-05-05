@@ -1,0 +1,41 @@
+<!doctype html>
+<html>
+<head>    	
+<title>try to show alert “Hello!” when resizing is finished!</title>
+<link rel="stylesheet" href="jquery-ui.css"> 
+<script src="jquery-3.4.1.min.js"></script> 
+<script src="jquery-ui.js"></script>
+<style>
+#resizable{
+	height:100px;
+	width:200px;
+	background-color:yellow;
+}
+#also{
+	height:150px;
+	width:150px;
+	background-color:gray;
+}
+</style>
+</head>    
+<body>    
+	<div id="resizable">
+	</div>
+	<div id="also">
+	</div>
+<script>
+    <!-- $( "#resizable" ).resizable({ -->
+      <!-- alsoResize: "#also" -->
+    <!-- }); -->
+    <!-- $( "#also" ).resizable(); -->
+		$( "#resizable" ).resizable({
+			grid:50,
+			alsoResize: "#also",
+			resize: function( event, ui ) {
+			alert("hello");		
+			}
+		});
+		$( "#also" ).resizable();
+</script>
+</body>
+</html>

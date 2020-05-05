@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>  
+        <title>JS 4</title>
+    </head>
+
+    <body>
+    	
+		<button id="mybutton">Change Text</button>		
+		<p id="text1">This is a paragraph!</p>
+		
+		<button id="secbutton">Append text</button>		
+		<p id="text2">James</p>	
+		
+    	<script type="text/javascript">
+        	
+			document.getElementById("mybutton").onclick=function(){
+				document.getElementById("text1").innerHTML="Changed!";
+			}
+			document.getElementById("secbutton").onclick=function(){
+				document.getElementById("text2").innerHTML="<h4>Hello, "+document.getElementById("text2").innerHTML+" <h6>how are you!";
+			}
+        </script>
+    </body>
+</html>

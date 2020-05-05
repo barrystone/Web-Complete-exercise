@@ -1,0 +1,287 @@
+<!doctype html>
+<html>
+<head>    	
+<title>JQuery project</title>    
+<script src="jquery-3.4.1.min.js"></script>
+<style type="text/css">
+body{
+	padding:0;
+	margin:0 0;
+	font-family: system, "Helvetica Neue", Helvetica, Arial;
+	<!-- height:100%; -->
+}
+#logo{
+	margin:0px 0px 0px 0px;
+	width:0px;
+	padding:7px 0px 0px 10px;
+	float:left;
+	font-weight:bold;
+	font-size:18.7px;
+}
+header{
+	width:100%;
+	height:35px;
+	background-color:#ededed;
+	border-bottom: 1px solid #bfbfbf;
+}
+#buttonContainer{
+	width:260px;
+	height:28px;	
+	margin:0px auto;	
+	position:relative;
+	top:2.5px;
+}
+.allButton{	
+	height:100%;	
+	margin-left:0px;
+	float:left;	
+	cursor: pointer;
+	user-select: none;
+	<!-- background-color:#e8f2ff; -->
+}
+#HTML{
+	border: 1px solid #cccccc;	
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+}
+#CSS{
+	border-right: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+}
+#JavaScript{
+	border-right: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+}
+#Output{
+	border: 1px solid #cccccc;
+	border-left:none; 	
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	<!-- @include allButton; -->
+}
+.eachBottom-text{
+	font-size:13px;
+	padding:6px 10px 6px 10px;
+}
+.highlightedTrue{
+	background-color:#f7f7f7 !important;
+}
+.highlightedFalse{
+	background-color:#e4e4e4 !important;
+}
+.active{
+	background-color:#e8f2ff;
+}
+main{
+	background:green;
+	<!-- height:100%; -->
+}
+textarea{
+	resize:none;
+	border-top:none;
+	border-color:grey;
+	height:100%;
+	float:left;
+	width:49%;
+	<!-- width:50%; -->
+}
+iframe{
+	border:none;
+	float:left;
+	width:50%;
+	height:100%;
+	<!-- border-bottom:1px grey solid; -->
+}
+.panel{	
+	float:left;
+	border-left:none;
+	<!-- width:50%; -->
+}
+.hidden{
+	display:none;
+}
+.HTMLtext{
+	font-weight:bold;
+}
+</style>
+</head>    
+<body>    	
+	<header>
+		<div id="logo">CodePlayer</div>
+		<div id="buttonContainer">
+			<div id="HTML" class="allButton toggleButton">
+				<div class="eachBottom-text">HTML</div>
+			</div>	
+			<div id="CSS" class="allButton toggleButton">
+				<div class="eachBottom-text">CSS</div>
+			</div>	
+			<div id="JavaScript" class="allButton toggleButton">
+				<div class="eachBottom-text">JavaScript</div>
+			</div>	
+			<div id="Output" class="allButton toggleButton">
+				<div class="eachBottom-text">Output</div>
+			</div>			
+		</div>
+	</header>
+	<main>
+		<textarea id="HTMLPanel" class="panel"><h1 id="new">Hello World!</h1></textarea>
+		<textarea id="CSSPanel" class="panel hidden">h1{ color:green;}</textarea>
+		<textarea id="JavaScriptPanel" class="panel hidden">document.getElementById("new").innerHTML="HELLO";</textarea>
+		<iframe id="OutputPanel" class="panel"></iframe>
+		<!-- <textarea id="CSSTexterea"></textarea> -->
+		<!-- <textarea id="JavaScriptTexterea"></textarea> -->
+		<!-- <textarea id="OutputTexterea"></textarea> -->
+	</main>
+<script type="text/javascript">
+	
+	$(".panel").height($(window).height()-$("header").height()-8);
+	
+	$("textarea").on('change keyup paste',function(){
+		$("iframe").contents().find("html").html("<html><head><style>"+$("#CSSPanel").val()+"</style></head>"+"<body>"+$("#HTMLPanel").val()+"</body></html>");
+		document.getElementById("OutputPanel").contentWindow.eval($("#JavaScriptPanel").val());
+	});	
+	
+	var HTMLstatus=true;
+	var CSSstatus=false;
+	var JavaScriptstatus=false;
+	var Outputstatus=true;
+	$("#HTML").addClass('active');
+	$("#Output").addClass('active');
+	$("#HTML").hover(function(){
+		if(HTMLstatus){
+		$("#HTML").addClass("highlightedTrue");	
+		}else{
+		$("#HTML").addClass("highlightedFalse");	
+		}
+	},function(){
+		if(HTMLstatus){
+		$("#HTML").removeClass("highlightedTrue");	
+		}else{
+		$("#HTML").removeClass("highlightedFalse");	
+		}
+	}
+	);
+	$("#HTML").click(function(){
+	var panelId=$(this).attr("id")+"Panel";	
+	$("#"+panelId).toggleClass("hidden");
+	var numberOfActivePanels=4-$('.hidden').length;
+	$(".panel").width(($(window).width()/numberOfActivePanels)-10);
+		if(HTMLstatus){
+			$("#HTML").removeClass("active");
+			$("#HTML").removeClass("highlightedTrue");	
+			$("#HTML").addClass("HTMLtext");
+			HTMLstatus=false;			
+		}else{
+			$("#HTML").addClass("active");
+			$("#HTML").removeClass("HTMLtext");
+			$("#HTML").removeClass("highlightedFalse");	
+			HTMLstatus=true;			
+		}
+	});
+	
+	$("#CSS").hover(function(){
+		if(CSSstatus){
+		$("#CSS").addClass("highlightedTrue");	
+		}else{
+		$("#CSS").addClass("highlightedFalse");	
+		}
+	},function(){
+		if(CSSstatus){
+		$("#CSS").removeClass("highlightedTrue");	
+		}else{
+		$("#CSS").removeClass("highlightedFalse");	
+		}
+	}
+	);
+	$("#CSS").click(function(){
+	var panelId=$(this).attr("id")+"Panel";	
+	$("#"+panelId).toggleClass("hidden");
+	var numberOfActivePanels=4-$('.hidden').length;
+	$(".panel").width(($(window).width()/numberOfActivePanels)-10);
+		if(CSSstatus){
+			$("#CSS").removeClass("active");
+			$("#CSS").removeClass("highlightedTrue");
+			CSSstatus=false;			
+		}else{
+			$("#CSS").addClass("active");
+			$("#CSS").removeClass("highlightedFalse");
+			CSSstatus=true;			
+		}
+	});
+	$("#JavaScript").hover(function(){
+		if(JavaScriptstatus){
+		$("#JavaScript").addClass("highlightedTrue");	
+		}else{
+		$("#JavaScript").addClass("highlightedFalse");	
+		}
+	},function(){
+		if(JavaScriptstatus){
+		$("#JavaScript").removeClass("highlightedTrue");	
+		}else{
+		$("#JavaScript").removeClass("highlightedFalse");	
+		}
+	}
+	);
+	$("#JavaScript").click(function(){
+	var panelId=$(this).attr("id")+"Panel";	
+	$("#"+panelId).toggleClass("hidden");
+	var numberOfActivePanels=4-$('.hidden').length;
+	$(".panel").width(($(window).width()/numberOfActivePanels)-10);
+		if(JavaScriptstatus){
+			$("#JavaScript").removeClass("active");
+			$("#JavaScript").removeClass("highlightedTrue");
+			JavaScriptstatus=false;			
+		}else{
+			$("#JavaScript").addClass("active");
+			$("#JavaScript").removeClass("highlightedFalse");
+			JavaScriptstatus=true;			
+		}
+	});
+	
+	$("#Output").hover(function(){
+		if(Outputstatus){
+		$("#Output").addClass("highlightedTrue");	
+		}else{
+		$("#Output").addClass("highlightedFalse");	
+		}
+	},function(){
+		if(Outputstatus){
+		$("#Output").removeClass("highlightedTrue");	
+		}else{
+		$("#Output").removeClass("highlightedFalse");	
+		}
+	}
+	);
+	$("#Output").click(function(){
+	var panelId=$(this).attr("id")+"Panel";	
+	$("#"+panelId).toggleClass("hidden");
+	var numberOfActivePanels=4-$('.hidden').length;
+	$(".panel").width(($(window).width()/numberOfActivePanels)-10);
+		if(Outputstatus){
+			$("#Output").removeClass("active");
+			$("#Output").removeClass("highlightedTrue");
+			Outputstatus=false;			
+		}else{
+			$("#Output").addClass("active");
+			$("#Output").removeClass("highlightedFalse");
+			Outputstatus=true;			
+		}
+	});
+	<!-- $(".toggleButton").click(function(){ -->
+		<!-- $(this).toggleClass("active"); -->
+		<!-- $(this).removeClass("highlighted"); -->
+		<!-- var panelId=$(this).attr("id")+"Panel";	 -->
+		<!-- $("#"+panelId).toggleClass("hidden"); -->
+		<!-- var numberOfActivePanels=4-$('.hidden').length; -->
+		<!-- $(".panel").width(($(window).width()/numberOfActivePanels)-10);	 -->
+	<!-- });	 -->
+	<!-- $(".toggleButton").hover(function(){	 -->
+		<!-- $(this).addClass("highlighted"); -->
+	<!-- },function(){ -->
+		<!-- $(this).removeClass("highlighted"); -->
+	<!-- }); -->	
+</script>
+</body>
+</html>

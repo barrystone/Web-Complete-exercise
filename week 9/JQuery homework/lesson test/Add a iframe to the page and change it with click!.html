@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>    	
+<title>Add a iframe to the page and change it with click!</title>    
+<script src="jquery-3.4.1.min.js"></script>
+<style type="text/css">
+
+#squares{
+	height:100px;
+	width:200px;
+	background-color:red;
+	margin:10px;
+}
+</style>
+</head>    
+<body>    	
+	<div id="squares"><h3>click me linking to Harden's hightlights</h3></div>
+	<iframe src="https://www.youtube.com/embed/2BXf5QgvAxY" width="500px" height="300px"></iframe>
+<script type="text/javascript">
+
+	$("#squares").click( function(){
+		$("iframe").attr("src","https://www.youtube.com/embed/vqshSjOh2xs");
+	}
+	);
+</script>
+</body>
+</html>

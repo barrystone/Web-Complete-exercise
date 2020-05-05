@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+<head>    	
+<title>How to make it move in certain way?</title>
+<link rel="stylesheet" href="jquery-ui.css"> 
+<script src="jquery-3.4.1.min.js"></script> 
+<script src="jquery-ui.js"></script>
+<style>
+#draggable{
+	<!-- width:400px; -->
+	<!-- height:400px; -->
+	<!-- background-color:gray; -->
+}
+</style>
+</head>    
+<body>    
+<div style="width:400px;height:400px;background-color:gray;">	
+	<span id="draggable">This is a paragraph!</span>
+</div>
+<script>
+	$( function() {
+		$( "#draggable" ).draggable({containment:"parent"});
+	} );
+</script>
+</body>
+</html>

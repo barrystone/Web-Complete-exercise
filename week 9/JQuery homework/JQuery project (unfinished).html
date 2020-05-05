@@ -1,0 +1,212 @@
+<!doctype html>
+<html>
+<head>    	
+<title>JQuery project</title>    
+<script src="jquery-3.4.1.min.js"></script>
+<style type="text/css">
+body{
+	margin:0 0;
+	font-family: system, "Helvetica Neue", Helvetica, Arial;
+}
+h3{
+	margin:0px 0px 0px 0px;
+	width:0px;
+	padding:7px 0px 0px 10px;
+	float:left;
+}
+#topbar{
+	width:100%;
+	height:35px;
+	background-color:#ededed;
+	border-bottom: 1px solid #bfbfbf;
+}
+#allButton{
+	width:260px;
+	height:28px;
+	position:relative;
+	left:620px;
+	top:2.5px;
+	<!-- background-color:#7cb593; -->
+		<!-- border: 1px solid #cccccc; -->
+		<!-- border-radius:5px; -->
+}
+#HTMLButton{
+	border: 1px solid #cccccc;
+	background-color:#e8f2ff;
+	height:100%;	
+	margin-left:0px;
+	float:left;
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+}
+#CSSButton{
+	border-right: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	background-color:#e8f2ff;
+	height:100%;	
+	margin-left:0px;
+	float:left;	
+}
+#JavaScriptButton{
+	border-right: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+	background-color:#e8f2ff;
+	height:100%;	
+	margin-left:0px;
+	float:left;	
+}
+#OutputButton{
+	border: 1px solid #cccccc;
+	border-left:none; 
+	background-color:#e8f2ff;
+	height:100%;	
+	margin-left:0px;
+	float:left;
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+}
+#allButton a{
+	text-decoration:none;
+	margin:0px 0px;
+	padding:0px 0px;
+	color:#232323;
+}
+.eachBottom-text{
+	font-size:13px;
+	padding:6px 10px 6px 10px;
+}
+</style>
+</head>    
+<body>    	
+	<div id="topbar">
+		<h3>CodePlayer</h3>
+		<div id="allButton">
+			<a style="margin-left:0px">
+				<div id="HTMLButton">
+					<div class="eachBottom-text">HTML</div>
+				</div>
+			</a>
+			<a  style="margin-left:0px">
+				<div id="CSSButton">
+					<div class="eachBottom-text">CSS</div>
+				</div>
+			</a>
+			<a  style="margin-left:0px">
+				<div id="JavaScriptButton">
+					<div class="eachBottom-text">JavaScript</div>
+				</div>
+			</a>
+			<a  style="margin-left:0px" >
+				<div id="OutputButton">
+					<div class="eachBottom-text">Output</div>
+				</div>
+			</a>	
+		</div>
+	</div>
+<script type="text/javascript">
+	var HTMLstatus=true;
+	var CSSstatus=true;
+	var JavaScriptstatus=true;
+	var Outputstatus=true;
+	$("#HTMLButton").hover(function(){
+		if(HTMLstatus){
+		$("#HTMLButton").css("background-color","#f7f7f7");	
+		}else{
+		$("#HTMLButton").css("background-color","#e4e4e4");
+		}
+	},function(){
+		if(HTMLstatus){
+		$("#HTMLButton").css("background-color","#e8f2ff");	
+		}else{
+		$("#HTMLButton").css("background-color","#ededed");
+		}
+	}
+	);
+	$("#HTMLButton").click(function(){
+		if(HTMLstatus){
+			$("#HTMLButton").css("background-color","#e4e4e4");
+			$("#HTMLButton").css("font-weight","bold");
+			HTMLstatus=false;			
+		}else{
+			$("#HTMLButton").css("background-color","#e8f2ff");	
+			$("#HTMLButton").css("font-weight","normal");
+			HTMLstatus=true;			
+		}
+	});
+	
+	$("#CSSButton").hover(function(){
+		if(CSSstatus){
+		$("#CSSButton").css("background-color","#f7f7f7");	
+		}else{
+		$("#CSSButton").css("background-color","#e4e4e4");
+		}
+	},function(){
+		if(CSSstatus){
+		$("#CSSButton").css("background-color","#e8f2ff");	
+		}else{
+		$("#CSSButton").css("background-color","#ededed");
+		}
+	}
+	);
+	$("#CSSButton").click(function(){
+		if(CSSstatus){
+			$("#CSSButton").css("background-color","#e4e4e4");
+			CSSstatus=false;			
+		}else{
+			$("#CSSButton").css("background-color","#e8f2ff");	
+			CSSstatus=true;			
+		}
+	});
+	$("#JavaScriptButton").hover(function(){
+		if(JavaScriptstatus){
+		$("#JavaScriptButton").css("background-color","#f7f7f7");	
+		}else{
+		$("#JavaScriptButton").css("background-color","#e4e4e4");
+		}
+	},function(){
+		if(JavaScriptstatus){
+		$("#JavaScriptButton").css("background-color","#e8f2ff");	
+		}else{
+		$("#JavaScriptButton").css("background-color","#ededed");
+		}
+	}
+	);
+	$("#JavaScriptButton").click(function(){
+		if(JavaScriptstatus){
+			$("#JavaScriptButton").css("background-color","#e4e4e4");
+			JavaScriptstatus=false;			
+		}else{
+			$("#JavaScriptButton").css("background-color","#e8f2ff");	
+			JavaScriptstatus=true;			
+		}
+	});
+	
+	$("#OutputButton").hover(function(){
+		if(Outputstatus){
+		$("#OutputButton").css("background-color","#f7f7f7");	
+		}else{
+		$("#OutputButton").css("background-color","#e4e4e4");
+		}
+	},function(){
+		if(Outputstatus){
+		$("#OutputButton").css("background-color","#e8f2ff");	
+		}else{
+		$("#OutputButton").css("background-color","#ededed");
+		}
+	}
+	);
+	$("#OutputButton").click(function(){
+		if(Outputstatus){
+			$("#OutputButton").css("background-color","#e4e4e4");
+			Outputstatus=false;			
+		}else{
+			$("#OutputButton").css("background-color","#e8f2ff");	
+			Outputstatus=true;			
+		}
+	});
+	
+</script>
+</body>
+</html>

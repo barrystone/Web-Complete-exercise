@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+    <head>  
+        <title>How to display in separate line</title>
+	<!-- #display{ -->
+		
+	<!-- } -->
+    </head>
+			
+    <body>
+		<div id="text"></div>
+    	<script type="text/javascript">
+			
+			var tweets=["james","is the best play"];
+			tweets.push("definately");
+			console.log(tweets);
+			var tweetString="";
+				for(var i=0;i<tweets.length;i++ ){
+					tweetString=tweetString+tweets[i]+"<br>";
+				}
+				document.getElementById("text").innerHTML=tweetString;
+        </script>
+		
+    </body>
+</html>

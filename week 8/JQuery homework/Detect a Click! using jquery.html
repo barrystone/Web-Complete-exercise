@@ -1,0 +1,36 @@
+<!doctype html>
+<head>    	
+<title>Detect a Click! using jquery</title>    
+<script src="jquery-3.4.1.min.js"></script>
+<style type="text/css">
+#circle{
+	height:100px;
+	width:100px;
+	border-radius:50%;
+	background-color:green;
+	margin:10px;
+}
+.squares{
+	height:100px;
+	width:100px;
+	background-color:red;
+	margin:10px;
+}
+</style>
+</head>    
+<body>    	
+	<div id="circle"></div>      
+	<div class="squares"></div>      
+	<div class="squares"></div>      
+<script type="text/javascript">
+	$(".squares").click( function(){
+		alert("a square was clicked ! ");
+	}
+	);
+	$("#circle").click( function(){
+		alert("a circle was clicked ! ");
+	}
+	);
+</script>
+</body>
+</html>

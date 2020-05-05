@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+<head>    	
+<title>how to make one div draggable and another one droppable? </title>
+<link rel="stylesheet" href="jquery-ui.css"> 
+<script src="jquery-3.4.1.min.js"></script> 
+<script src="jquery-ui.js"></script>
+<style>
+#draggable{
+	height:100px;
+	width:200px;
+	background-color:yellow;
+	float:left;
+}
+#droppable{
+	height:300px;
+	width:300px;
+	background-color:gray;
+	float:left;
+	margin: 400px 0px 0px 400px;
+	<!-- position:relative; -->
+	<!-- top:500px; -->
+	<!-- left:500px; -->
+}
+</style>
+</head>    
+<body>    
+	<div id="draggable">
+	</div>
+	<div id="droppable">
+	</div>
+<script>
+	$( function() {
+    $( "#draggable" ).draggable();
+    $( "#droppable" ).droppable({
+      drop: function( event, ui ) {
+        alert( "Dropped!" );
+      }
+    });
+  } );
+</script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!doctype html>
+<html>
+	<head>
+    	<title>Mini Challenge!t</title>
+		<style>
+			#red{
+				background-color:red;
+				float:left;
+			}
+			#blue{
+				background-color:blue;
+				float:left;
+			}
+			#yellow{
+				background-color:yellow;
+				float:left;
+			}
+			.circle{
+				height:200px;
+				width:200px;
+				border-radius:50%;
+				margin: 5px 5px 0px 5px;
+			}
+		</style>
+    </head>
+    	<body>
+			<div id="red" class="circle"></div>
+			<div id="blue" class="circle"></div>
+			<div id="yellow" class="circle"></div>
+		
+    			<script>
+					document.getElementById("red").onclick=function(){
+						document.getElementById("red").style.display="none";
+					}
+					document.getElementById("blue").onclick=function(){
+						document.getElementById("blue").style.display="none";
+					}
+					document.getElementById("yellow").onclick=function(){
+						document.getElementById("yellow").style.display="none";
+					}
+        		</script>
+    	</body>
+</html>

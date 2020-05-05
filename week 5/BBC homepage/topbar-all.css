@@ -1,0 +1,85 @@
+	.topbar{
+		background-color:white;
+		width:100%;
+		margin: 0 auto;	
+	}
+	.topbar-center{
+		background-color:white;
+		height:40px;
+		width:1278.1px;
+		margin: 0 auto;	
+	}	
+	.eachbar{
+		float:left;
+		border-left:1.5px #d2d2d2 solid;
+		height:100%;
+		font-size:13px;
+		font-weight: bold;
+	}
+	.eachbar:hover{
+		text-decoration:underline;
+	}
+	.topbar a{
+		text-decoration:none;
+		color:black;
+	}
+	#bbcimg{
+		float:left;
+		margin:9px 17px 0px 16px;
+	}
+	#mysinginimg{
+		width:18px;
+		margin:12px 0px 0px 15px;
+		float:left;
+	}
+	#myarrowimg{
+		width:7px;
+		position:relative;
+		top:-1px;
+		left:57px;
+		margin-right:57px;
+	}
+	#signin{
+		float:left;
+		margin-top:1.5px;
+		margin-left:8px;
+		margin-right:88px;
+	}
+	.eachbartext{
+		margin:0px 20px 0px 20px;
+	}
+	#mysearch{
+		width: 157px;
+		background-color:#E4E4E4;
+		<!-- type-color:black; -->
+		float:left;
+		margin:8px 0px 0px 16px;
+		<!-- font-color:black; -->
+	}
+	#searchimg{
+		width: 25px;
+		position:relative;
+		top:6.75px;
+		left:-4.5px;
+	}
+	
+	input[type=text], select {
+	  width: 100%;
+	  padding: 4px 0px 2.5px 3.5px;
+	  margin: 8px 0;
+	  display: inline-block;
+	  border: 1px solid #E4E4E4;
+	  <!-- box-sizing: border-box; -->
+	}
+	input{
+	  font-weight: bold;
+	
+	}
+	::placeholder { 		
+		color: black;
+		font-weight: bold;
+		opacity: 1; 
+	}	
+	::focus::placeholder {
+		color: gray;
+	}

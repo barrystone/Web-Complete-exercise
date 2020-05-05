@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+	<head>
+    	<title>For Loops</title>
+    </head>
+    <body>
+    	<p id="colorList"></p>
+          <script type="text/javascript">
+            	
+			var colors=["Red","Yellow","Blue"];
+			console.log(colors);
+			var String="";
+				for(var i=0;i<colors.length;i++ ){
+					String=String+colors[i]+" ";
+				}
+				document.getElementById("colorList").innerHTML=String;
+      	</script>
+    </body>
+</html>

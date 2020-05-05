@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>  
+        <title>ppt test (4) guss the magic number</title>
+    </head>
+			
+    <body>
+		<input style="text" id="myword">
+		<button id="save">Save</button>
+    	<script type="text/javascript">
+			var answer=123;
+			alert("answer is"+answer);
+			document.getElementById("save").onclick=function(){
+				var myinput=document.getElementById("myword").value;
+				if(myinput==answer){
+				alert("right!");
+				}else{
+				alert("It isn't the answer");
+			}
+			}
+			
+			
+			
+        </script>
+		
+    </body>
+</html>

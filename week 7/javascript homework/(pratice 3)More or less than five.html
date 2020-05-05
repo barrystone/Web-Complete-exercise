@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>  
+        <title>More or less than five</title>
+    </head>
+
+	<body>
+		<p>More or less than five</p>
+		<input style="text" id="myinput">
+		<button id="save">Save value</button>
+    	<script type="text/javascript">
+			var y="More or less than five";
+			document.getElementById("save").onclick=function(){
+				var x=document.getElementById("myinput").value;				
+				var none=" ";
+				if(x.length==0){
+					alert("isn't have an answer .");
+				}else if(x>5){
+					y="x is more than 5";
+					alert(y);
+				}else if(x==5){
+					y="x is 5";
+					alert(y);
+				}else if(x<5){
+					y="x is less than 5";
+					alert(y);
+				}else{
+					alert("isn't a digital .");
+				}
+			}
+        </script>
+    </body>
+</html>

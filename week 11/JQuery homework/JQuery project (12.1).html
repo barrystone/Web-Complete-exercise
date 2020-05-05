@@ -1,0 +1,228 @@
+<!doctype html>
+<html>
+<head>    	
+<title>JQuery project</title>    
+<script src="jquery-3.4.1.min.js"></script>
+<style type="text/css">
+body{
+	margin:0 0;
+	font-family: system, "Helvetica Neue", Helvetica, Arial;
+}
+#logo{
+	margin:0px 0px 0px 0px;
+	width:0px;
+	padding:7px 0px 0px 10px;
+	float:left;
+	font-weight:bold;
+	font-size:18.7px;
+}
+header{
+	width:100%;
+	height:35px;
+	background-color:#ededed;
+	border-bottom: 1px solid #bfbfbf;
+}
+#buttonContainer{
+	width:260px;
+	height:28px;	
+	margin:0px auto;	
+	position:relative;
+	top:2.5px;
+}
+.allButton{
+	background-color:#e8f2ff;
+	height:100%;	
+	margin-left:0px;
+	float:left;	
+	cursor: pointer;
+	user-select: none;
+}
+#HTMLButton{
+	border: 1px solid #cccccc;	
+	border-top-left-radius:5px;
+	border-bottom-left-radius:5px;
+}
+#CSSButton{
+	border-right: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+}
+#JavaScriptButton{
+	border-right: 1px solid #cccccc;
+	border-top: 1px solid #cccccc;
+	border-bottom: 1px solid #cccccc;
+}
+#OutputButton{
+	border: 1px solid #cccccc;
+	border-left:none; 	
+	border-top-right-radius:5px;
+	border-bottom-right-radius:5px;
+	<!-- @include allButton; -->
+}
+.eachBottom-text{
+	font-size:13px;
+	padding:6px 10px 6px 10px;
+}
+.highlighted{
+	background-color:#f7f7f7;
+}
+.highlighted2{
+	background-color:red;
+	<!-- background-color:#e4e4e4; -->
+}
+.active{
+	background-color:#ededed;
+}
+</style>
+</head>    
+<body>    	
+	<header>
+		<div id="logo">CodePlayer</div>
+		<div id="buttonContainer">
+			<div id="HTMLButton" class="allButton toggleButton">
+				<div class="eachBottom-text">HTML</div>
+			</div>	
+			<div id="CSSButton" class="allButton toggleButton">
+				<div class="eachBottom-text">CSS</div>
+			</div>	
+			<div id="JavaScriptButton" class="allButton toggleButton">
+				<div class="eachBottom-text">JavaScript</div>
+			</div>	
+			<div id="OutputButton" class="allButton toggleButton">
+				<div class="eachBottom-text">Output</div>
+			</div>			
+		</div>
+	</header>
+<script type="text/javascript">
+
+
+	
+	
+	
+	
+	
+
+	var HTMLstatus=true;
+	var CSSstatus=true;
+	var JavaScriptstatus=true;
+	var Outputstatus=true;
+	$("#HTMLButton").hover(function(){
+		if(HTMLstatus){
+		$("#HTMLButton").css("background-color","#f7f7f7");	
+		}else{
+		$("#HTMLButton").css("background-color","#e4e4e4");
+		}
+	},function(){
+		if(HTMLstatus){
+		$("#HTMLButton").css("background-color","#e8f2ff");	
+		}else{
+		$("#HTMLButton").css("background-color","#ededed");
+		}
+	}
+	);
+	$("#HTMLButton").click(function(){
+		if(HTMLstatus){
+			$("#HTMLButton").css("background-color","#e4e4e4");
+			$("#HTMLButton").css("font-weight","bold");
+			HTMLstatus=false;			
+		}else{
+			$("#HTMLButton").css("background-color","#e8f2ff");	
+			$("#HTMLButton").css("font-weight","normal");
+			HTMLstatus=true;			
+		}
+	});
+	
+	$("#CSSButton").hover(function(){
+		if(CSSstatus){
+		$("#CSSButton").css("background-color","#f7f7f7");	
+		}else{
+		$("#CSSButton").css("background-color","#e4e4e4");
+		}
+	},function(){
+		if(CSSstatus){
+		$("#CSSButton").css("background-color","#e8f2ff");	
+		}else{
+		$("#CSSButton").css("background-color","#ededed");
+		}
+	}
+	);
+	$("#CSSButton").click(function(){
+		if(CSSstatus){
+			$("#CSSButton").css("background-color","#e4e4e4");
+			CSSstatus=false;			
+		}else{
+			$("#CSSButton").css("background-color","#e8f2ff");	
+			CSSstatus=true;			
+		}
+	});
+	$("#JavaScriptButton").hover(function(){
+		if(JavaScriptstatus){
+		$("#JavaScriptButton").css("background-color","#f7f7f7");	
+		}else{
+		$("#JavaScriptButton").css("background-color","#e4e4e4");
+		}
+	},function(){
+		if(JavaScriptstatus){
+		$("#JavaScriptButton").css("background-color","#e8f2ff");	
+		}else{
+		$("#JavaScriptButton").css("background-color","#ededed");
+		}
+	}
+	);
+	$("#JavaScriptButton").click(function(){
+		if(JavaScriptstatus){
+			$("#JavaScriptButton").css("background-color","#e4e4e4");
+			JavaScriptstatus=false;			
+		}else{
+			$("#JavaScriptButton").css("background-color","#e8f2ff");	
+			JavaScriptstatus=true;			
+		}
+	});
+	
+	$("#OutputButton").hover(function(){
+		if(Outputstatus){
+		$("#OutputButton").css("background-color","#f7f7f7");	
+		}else{
+		$("#OutputButton").css("background-color","#e4e4e4");
+		}
+	},function(){
+		if(Outputstatus){
+		$("#OutputButton").css("background-color","#e8f2ff");	
+		}else{
+		$("#OutputButton").css("background-color","#ededed");
+		}
+	}
+	);
+	$("#OutputButton").click(function(){
+		if(Outputstatus){
+			$("#OutputButton").css("background-color","#e4e4e4");
+			Outputstatus=false;			
+		}else{
+			$("#OutputButton").css("background-color","#e8f2ff");	
+			Outputstatus=true;			
+		}
+	});
+		<!-- $(".toggleButton").click(function(){ -->
+		<!-- $(this).toggleClass("active"); -->
+		<!-- $(this).removeClass("highlighted");		 -->
+	<!-- });	 -->
+	<!-- $(".toggleButton").hover(	 -->
+	<!-- if($(this).hasClass("active")){ -->
+			<!-- function(){	 -->
+				<!-- $(this).addClass("highlighted"); -->
+			<!-- },function(){ -->
+				<!-- $(this).removeClass("highlighted"); -->
+			<!-- } -->
+	<!-- }else { -->
+			<!-- function(){	 -->
+				<!-- $(this).addClass("highlighted2"); -->
+			<!-- },function(){ -->
+				<!-- $(this).removeClass("highlighted2"); -->
+			<!-- } -->
+	<!-- }); -->
+	
+	
+	
+</script>
+</body>
+</html>

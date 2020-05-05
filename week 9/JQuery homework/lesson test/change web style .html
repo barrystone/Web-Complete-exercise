@@ -1,0 +1,26 @@
+<!doctype html>
+<head>    	
+<title>change web style </title>    
+<script src="jquery-3.4.1.min.js"></script>
+<style type="text/css">
+
+#squares{
+	height:100px;
+	width:200px;
+	background-color:red;
+	margin:10px;
+}
+</style>
+</head>    
+<body>    	
+	<div id="squares"><h3>hover me changing the icon.</h3></div>           
+<script type="text/javascript">
+
+	$("#squares").hover( function(){
+		$("#squares").css("width","400");
+		$("#squares").css("background-color","#96ef70");
+	}
+	);
+</script>
+</body>
+</html>

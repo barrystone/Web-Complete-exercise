@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>    	
+<title>fade in/out paragraph</title>    
+<script src="jquery-3.4.1.min.js"></script>
+<style type="text/css">
+#inbuttom{
+	height:20px;
+	width:95px;
+	border:solid 1px black;
+	background-color:#c6adad;
+	margin:5px;
+}
+#outbuttom{
+	height:20px;
+	width:95px;
+	border:solid 1px black;
+	background-color:#c6adad;
+	margin:5px;
+}
+#nowtext{
+
+}
+#hiddentext{
+	display:none;
+}
+
+#space{
+	height:50px;
+	width:100%;
+}
+
+</style>
+</head>    
+<body> 
+	<div id="space">
+		<div id="nowtext">This is text.</div>
+		<div id="hiddentext">This is hidden text.</div>		
+	</div>
+	<button id="outbuttom">click fadeOut</button>
+	<button id="inbuttom">click fadeIn</button>
+	
+<script type="text/javascript">
+	$("#inbuttom").click( function(){
+		$("#hiddentext").fadeIn("slow");
+	}
+	);
+	$("#outbuttom").click( function(){
+		$("#nowtext").fadeOut("slow");
+	}
+	);
+</script>
+</body>
+</html>

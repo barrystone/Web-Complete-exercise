@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+<head>    	
+<title>toggle button fade in/out </title>    
+<script src="jquery-3.4.1.min.js"></script>
+<style type="text/css">
+
+#toggle{
+	height:20px;
+	width:95px;
+	border:solid 1px black;
+	background-color:#c6adad;
+	margin:5px;
+}
+#space{
+	height:50px;
+	width:100%;
+}
+
+</style>
+</head>    
+<body> 
+	<div id="space">
+		<div id="text">This is a text.</div>	
+	</div>
+	<button id="toggle">fade In/Out</button>
+	
+<script type="text/javascript">
+	$("#toggle").click( function(){
+		if($("#text").css("display")=="none"){
+			$("#text").fadeIn("slow");
+		}else{
+			$("#text").fadeOut("slow");
+		}
+	}
+	);
+	//第二種方法
+	<!-- var displaytext=true; -->
+	<!-- $("#toggle").click( function(){ -->
+		<!-- if(displaytext){ -->
+			<!-- $("#text").fadeOut("slow"); -->
+			<!-- displaytext=false; -->
+		<!-- }else{ -->
+			<!-- $("#text").fadeIn("slow"); -->
+			<!-- displaytext=true; -->
+		<!-- } -->
+	<!-- } -->
+	<!-- ); -->
+	
+	
+
+</script>
+</body>
+</html>

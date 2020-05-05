@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+    <head>  
+        <title>JS Game</title>
+    </head>
+			
+    <body>
+		range in 0 to 5<br>
+		<input style="text" id="myword">
+		<button id="save">Guess !</button>
+    	<script type="text/javascript">
+			
+			document.getElementById("save").onclick=function(){
+				var answer=Math.floor(Math.random()*6);
+				
+				var myinput = document.getElementById("myword").value;
+				if(myinput==answer){
+					alert("Well done ! You got it !");
+				}else{
+					alert("Isn't the answer,the answer is : "+answer);
+				}
+			}
+			
+			
+			
+        </script>
+		
+    </body>
+</html>

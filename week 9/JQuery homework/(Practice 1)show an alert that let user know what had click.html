@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>    	
+<title>show an alert that let user know what had click</title>    
+<script src="jquery-3.4.1.min.js"></script>
+<style type="text/css">
+#circle{
+	height:100px;
+	width:100px;
+	border-radius:50%;
+	background-color:green;
+	margin:10px;
+}
+.squares{
+	height:100px;
+	width:100px;
+	background-color:red;
+	margin:10px;
+}
+</style>
+</head>    
+<body>    	
+	<div id="circle"></div>      
+	<div class="squares"></div>      
+	<div class="squares"></div>      
+<script type="text/javascript">
+	$("div").click( function(){
+		if($(this).attr("id")=="circle"){
+			alert("circle had clicked");
+		}else if($(this).attr("class")=="squares"){
+			alert("square had clicked");
+		}
+	}
+	);
+	<!-- $("#circle").click( function(){ -->
+		<!-- $(#circle).html("circle had clicked"); -->
+		<!-- alert("circle had clicked"); -->
+	<!-- } -->
+	<!-- ); -->
+	<!-- $("#squares").click( function(){ -->
+		<!-- alert("square had clicked"); -->
+	<!-- } -->
+	<!-- ); -->
+</script>
+</body>
+</html>

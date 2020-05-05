@@ -1,0 +1,39 @@
+<!doctype html>
+<head>    	
+<title>Update web with click</title>    
+<script src="jquery-3.4.1.min.js"></script>
+<style type="text/css">
+
+#squares{
+	height:100px;
+	width:200px;
+	background-color:red;
+	margin:10px;
+}
+#circle{
+	height:100px;
+	width:100px;
+	border-radius:50%;
+	background-color:yellow;
+	margin:10px;
+}
+</style>
+</head>    
+<body>    	
+	<div id="squares"><h3>click me change the text.</h3></div> 
+	<div id="circle"><p>hover me change the text.</p></div>     	
+<script type="text/javascript">
+
+	$("#squares").click( function(){
+		$("h3").html("This text has changed");
+		alert($("h3").html());
+	}
+	);
+	$("#circle").hover( function(){
+		$("p").html("This text has changed");
+		alert($("p").html());
+	}
+	);
+</script>
+</body>
+</html>

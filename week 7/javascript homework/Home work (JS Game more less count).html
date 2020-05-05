@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+    <head>  
+        <title>Home work</title>
+    </head>
+    <body>
+		range in 0 to 5<br>
+		<input style="text" id="myword">
+		<button id="save">Guess !</button>
+    	<script type="text/javascript">
+			var answer=Math.floor(Math.random()*6);
+			var count=1;
+			document.getElementById("save").onclick=function(){
+				var myinput = document.getElementById("myword").value;
+				if(isNaN(myinput)==1){
+					alert("Isn't a integer");
+				}else{
+					if(myinput==answer){
+						alert("Well done ! You got it !"+"You try "+count+" times totally .");
+						answer=Math.floor(Math.random()*6);
+						count=1;
+					}else if(myinput==""){					
+						alert("Isn't have an answer");				
+					}else if(myinput>answer){
+						count++;
+						alert("less than");
+					}else if(myinput<answer){
+						count++;
+						alert("larger than");				
+					}
+				}
+			}			
+        </script>		
+    </body>
+</html>
